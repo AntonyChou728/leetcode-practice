@@ -16,3 +16,21 @@ public:
         return count;
     }
 };
+
+// bit operation version
+class Solution {
+public:
+    int numberOfSteps(int num) {
+        int count = 0;
+        while (num > 0){
+            if ((num & 1) == 0){
+                num >>= 1; // 相當於 num = num / 2
+            }
+            else{
+                num --;
+            }
+            count ++;
+        }
+        return count;
+    }
+};
