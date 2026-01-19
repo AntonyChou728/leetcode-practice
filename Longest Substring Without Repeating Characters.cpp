@@ -10,7 +10,7 @@ public:
         int maxlength = 0;
         for (int right = 0; right < s.length(); right++){
             char currentchar = s[right];
-            if (map.count(currentchar) && map[currentchar] >=left){
+            if (map.count(currentchar) && map[currentchar] >=left){ // map 已經存在這個字母了，指標跳到表的下一個字母繼續數
                 left = map[currentchar] + 1;
             }
             map[currentchar] = right;
